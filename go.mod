@@ -1,4 +1,4 @@
-module github/Make-life-game/gostn
+module github.com/Make-life-game/gostn
 
 go 1.17
 
