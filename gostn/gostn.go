@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 	"flag"
+	"github/Make-life-game/gostn"
 	"os"
-	"stn"
 )
 
 var path = flag.String("p", "", "Path to save, parent directory should be created before.")
@@ -26,8 +26,8 @@ func main() {
 		return
 	}
 
-	img := stn.GetFullScreenShot(*w, *h, *v)
-	code, msg := stn.UpdateScreenshotInfo(*path, img)
+	img := gostn.GetFullScreenShot(*w, *h, *v)
+	code, msg := gostn.UpdateScreenshotInfo(*path, img)
 	r := map[string]interface{}{
 		"path": path,
 		"code": code,
