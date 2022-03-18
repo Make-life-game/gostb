@@ -112,7 +112,7 @@ func GetFullScreenShot(w uint, h uint, v bool) *image.RGBA {
 	return cimg
 }
 
-func UpdateScreenshotInfo(file string, info *image.RGBA) (uint, string) {
+func SaveScreenshot(file string, info *image.RGBA) (uint, string) {
 	f, err := os.OpenFile(file, os.O_SYNC|os.O_RDWR|os.O_CREATE, 0666)
 	defer f.Close()
 	if err != nil {

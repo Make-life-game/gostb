@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"github/Make-life-game/gostn"
+	"github.com/Make-life-game/gostn"
 	"os"
 )
 
@@ -27,7 +27,7 @@ func main() {
 	}
 
 	img := gostn.GetFullScreenShot(*w, *h, *v)
-	code, msg := gostn.UpdateScreenshotInfo(*path, img)
+	code, msg := gostn.SaveScreenshot(*path, img)
 	r := map[string]interface{}{
 		"path": path,
 		"code": code,
